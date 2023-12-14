@@ -5,7 +5,6 @@ let totalMoney = function(n) {
         for (let day = 0; day < Math.min(n, 7); day++){
             sum += day + numberWeeks;
         }
-
         n -= 7;
         numberWeeks++;
     }

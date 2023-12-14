@@ -2,7 +2,7 @@
  * @param {Function[]} functions
  * @return {Function}
  */
-var compose = function(functions) {
+let compose = function(functions) {
     if (functions.length == 0) {
         return (x) => { return x; };
     }
@@ -13,6 +13,7 @@ var compose = function(functions) {
         };
     });
 };
+module.exports = compose;
 
 /**
  * const fn = compose([x => x + 1, x => 2 * x])

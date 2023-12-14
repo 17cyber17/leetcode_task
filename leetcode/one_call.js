@@ -2,21 +2,22 @@
  * @param {Function} fn
  * @return {Function}
  */
-var once = function(fn) {
+let once = function(fn) {
     
-    let сall = false;
+    let call = false;
     let result;
 
     return function(...args) {
-        if (!сall) {
+        if (!call) {
         result = fn(...args);
-        сall = true;
+        call = true;
         return result;
         } else {
             return undefined;
         }
     }
 };
+module.exports = once;
 
 /**
  * let fn = (a,b,c) => (a + b + c)
